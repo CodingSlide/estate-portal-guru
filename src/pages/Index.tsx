@@ -1,4 +1,3 @@
-
 import { Search, MapPin, Building2, Home, LandPlot } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -63,12 +62,18 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-12 px-4 md:pt-32 md:pb-20">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-down">
+      <section 
+        className="pt-24 pb-12 px-4 md:pt-32 md:pb-20 bg-cover bg-center bg-no-repeat relative"
+        style={{
+          backgroundImage: 'url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073")',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="container mx-auto text-center relative z-10">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-down text-white">
             Find Your Dream Property in Pune
           </h1>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-up">
+          <p className="text-gray-200 mb-8 max-w-2xl mx-auto animate-fade-up">
             Discover premium properties across prime locations in Pune. Your perfect home is just a search away.
           </p>
           
