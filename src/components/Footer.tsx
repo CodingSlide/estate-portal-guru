@@ -10,14 +10,17 @@ export const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center">
               <img 
-                src="https://www.instagram.com/prime9_realty/icon" 
+                src="/lovable-uploads/32c2042c-8d5e-4fa4-8574-a6b135fea1b2.png" 
                 alt="Prime9 Realty" 
-                className="h-12 w-auto mr-2" 
+                className="h-16 w-auto mr-2" 
               />
               <h3 className="text-xl font-bold">Prime9 Realty</h3>
             </div>
             <p className="text-gray-300 text-sm">
-              At Prime9 realty, we specialize in providing expert real estate services in Pune. Whether you're buying, selling, or investing, our team is dedicated to delivering personalized solutions tailored to your needs.
+              Pune Property Experts🎖️<br />
+              NA Plots | 🏡<br />
+              Residential & Commercial properties🗼<br />
+              ✨ Dream it, Own it, Rent it.💫
             </p>
           </div>
 
@@ -37,17 +40,17 @@ export const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-primary shrink-0 mt-1" />
-                <p className="text-gray-300 text-sm">
+                <MapPin className="h-6 w-6 text-primary shrink-0 mt-1" />
+                <p className="text-gray-300">
                   Downtown, City Vista, Fountain Road, Rakshak Nagar, Kharadi, Pune, Maharashtra 411014
                 </p>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-primary" />
-                <a href="tel:+919876543210" className="text-gray-300 hover:text-primary transition-colors">+91 98765 43210</a>
+                <Phone className="h-6 w-6 text-primary" />
+                <a href="tel:+917666248250" className="text-gray-300 hover:text-primary transition-colors">+91 7666 248250</a>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-primary" />
+                <Mail className="h-6 w-6 text-primary" />
                 <a href="mailto:info@prime9realty.com" className="text-gray-300 hover:text-primary transition-colors">info@prime9realty.com</a>
               </div>
             </div>
@@ -57,15 +60,19 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" className="bg-primary/10 p-2 rounded-full hover:bg-primary/20 transition-colors">
-                <Facebook className="h-5 w-5" />
+              <a href="https://facebook.com" className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors">
+                <Facebook className="h-6 w-6" />
               </a>
-              <a href="https://instagram.com/prime9_realty" className="bg-primary/10 p-2 rounded-full hover:bg-primary/20 transition-colors">
-                <Instagram className="h-5 w-5" />
+              <a href="https://instagram.com/prime9_realty" className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors">
+                <Instagram className="h-6 w-6" />
               </a>
-              <a href="https://linkedin.com" className="bg-primary/10 p-2 rounded-full hover:bg-primary/20 transition-colors">
-                <Linkedin className="h-5 w-5" />
+              <a href="https://linkedin.com" className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors">
+                <Linkedin className="h-6 w-6" />
               </a>
+            </div>
+            <div className="mt-4 text-gray-300">
+              <p>Instagram: @prime9_realty</p>
+              <p>41 posts • 8,977 followers • 33 following</p>
             </div>
           </div>
         </div>
