@@ -1,6 +1,7 @@
 
 import { Search, MapPin, Building2, Home, LandPlot } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 import { PropertyCard } from "@/components/PropertyCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,8 +9,8 @@ import { Input } from "@/components/ui/input";
 const properties = [
   {
     image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070",
-    title: "Luxury Villa in South Delhi",
-    location: "Greater Kailash, Delhi",
+    title: "Luxury Villa in Koregaon Park",
+    location: "Koregaon Park, Pune",
     price: "4,50,00,000",
     bedrooms: 4,
     bathrooms: 4,
@@ -18,8 +19,8 @@ const properties = [
   },
   {
     image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071",
-    title: "Modern Apartment in Mumbai",
-    location: "Bandra West, Mumbai",
+    title: "Modern Apartment in Kharadi",
+    location: "Kharadi, Pune",
     price: "2,75,00,000",
     bedrooms: 3,
     bathrooms: 2,
@@ -28,8 +29,8 @@ const properties = [
   },
   {
     image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070",
-    title: "Premium Flat in Bangalore",
-    location: "Indiranagar, Bangalore",
+    title: "Premium Flat in Magarpatta",
+    location: "Magarpatta, Pune",
     price: "95,000",
     bedrooms: 2,
     bathrooms: 2,
@@ -65,10 +66,10 @@ const Index = () => {
       <section className="pt-24 pb-12 px-4 md:pt-32 md:pb-20">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-down">
-            Find Your Dream Property in India
+            Find Your Dream Property in Pune
           </h1>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-up">
-            Discover premium properties across major Indian cities. Your perfect home is just a search away.
+            Discover premium properties across prime locations in Pune. Your perfect home is just a search away.
           </p>
           
           <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-4 flex flex-col md:flex-row gap-4 animate-fade-up">
@@ -121,13 +122,15 @@ const Index = () => {
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Find Your Dream Property?</h2>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Connect with our expert real estate agents for personalized assistance
+            Connect with our expert real estate agents for personalized assistance in Pune
           </p>
           <Button size="lg" className="animate-fade-up">
             Contact Us
           </Button>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
