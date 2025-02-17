@@ -1,3 +1,4 @@
+
 import { Search, MapPin, Building2, Home, LandPlot } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -42,21 +43,32 @@ const properties = [
 
 const propertyTypes = [
   {
-    icon: Home,
-    title: "Residential",
-    description: "Luxury Villas & Premium Apartments",
-    color: "bg-gradient-to-r from-[#C5A572] to-[#E2D1C3]"
-  },
-  {
     icon: Building2,
     title: "Commercial",
-    description: "Office Spaces & Retail Shops",
-    color: "bg-gradient-to-r from-[#9b87f5] to-[#7E69AB]"
+    color: "bg-gradient-to-r from-[#9b87f5] to-[#7E69AB] hover:from-[#7E69AB] hover:to-[#6E59A5] text-white"
   },
   {
     icon: LandPlot,
     title: "Land/Plots",
     description: "NA Plots & Investment Land",
+    color: "bg-gradient-to-r from-[#F1F0FB] to-[#F2FCE2]"
+  }
+];
+
+const templateSpaces = [
+  {
+    title: "Ready Possession",
+    description: "Move-in ready properties with immediate possession",
+    color: "bg-gradient-to-r from-[#C5A572] to-[#E2D1C3]"
+  },
+  {
+    title: "Under Construction",
+    description: "Upcoming projects with great investment potential",
+    color: "bg-gradient-to-r from-[#9b87f5] to-[#7E69AB]"
+  },
+  {
+    title: "Premium Projects",
+    description: "Luxury properties in prime locations",
     color: "bg-gradient-to-r from-[#F1F0FB] to-[#F2FCE2]"
   }
 ];
@@ -102,17 +114,41 @@ const Index = () => {
       <section className="py-12 px-4 bg-white">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Explore Property Types</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {propertyTypes.map((type) => (
               <Link 
                 to={`/${type.title.toLowerCase()}`} 
                 key={type.title}
                 className={`rounded-lg p-6 text-center hover:shadow-lg transition-all duration-300 ${type.color} group`}
               >
-                <type.icon className="h-12 w-12 mx-auto mb-4 text-primary group-hover:scale-110 transition-transform" />
-                <h3 className="text-xl font-semibold mb-2 text-secondary">{type.title}</h3>
-                <p className="text-gray-700">{type.description}</p>
+                <type.icon className="h-12 w-12 mx-auto mb-4 text-current group-hover:scale-110 transition-transform" />
+                <h3 className="text-xl font-semibold mb-2">{type.title}</h3>
+                {type.description && <p className="text-current/80">{type.description}</p>}
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Template Spaces */}
+      <section className="py-12 px-4 bg-accent/20">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Featured Categories</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {templateSpaces.map((space) => (
+              <div 
+                key={space.title}
+                className={`rounded-lg p-6 text-center hover:shadow-lg transition-all duration-300 ${space.color} backdrop-blur-sm`}
+              >
+                <h3 className="text-xl font-semibold mb-4">{space.title}</h3>
+                <p className="text-gray-700">{space.description}</p>
+                <div className="mt-6 h-32 bg-white/20 rounded-lg backdrop-blur-sm border border-white/10">
+                  {/* Template Space - Can be customized later */}
+                  <div className="h-full flex items-center justify-center text-gray-500">
+                    Template Space
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
