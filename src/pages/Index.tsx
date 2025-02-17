@@ -1,4 +1,3 @@
-
 import { Search, MapPin, Building2, Home, LandPlot } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -6,6 +5,7 @@ import { PropertyCard } from "@/components/PropertyCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Link } from "react-router-dom";
+import Map from "@/components/Map";
 
 const properties = [
   {
@@ -149,6 +149,23 @@ const Index = () => {
               Contact Us
             </Button>
           </Link>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="py-12 px-4 bg-white">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold mb-8">Our Location</h2>
+          <div className="relative">
+            <Map />
+            <div className="absolute top-4 left-4 bg-white p-4 rounded-lg shadow-lg z-10">
+              <h3 className="font-semibold text-lg mb-2">Prime9 Realty</h3>
+              <p className="text-gray-600">
+                <MapPin className="inline-block mr-1 h-4 w-4 text-primary" />
+                Kharadi, Pune, Maharashtra
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
