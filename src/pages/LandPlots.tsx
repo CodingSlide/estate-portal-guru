@@ -6,20 +6,49 @@ import { PropertyCard } from "@/components/PropertyCard";
 const landProperties = [
   {
     image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
-    title: "Premium Plot in Wagholi",
+    title: "Premium NA Plot in Wagholi",
     location: "Wagholi, Pune",
+    price: "75,00,000",
+    bedrooms: 0,
+    bathrooms: 0,
+    sqft: 2400,
+    type: "For Sale" as const,
+  },
+  {
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    title: "Commercial Plot in Hinjewadi",
+    location: "Hinjewadi Phase 2, Pune",
+    price: "1,25,00,000",
+    bedrooms: 0,
+    bathrooms: 0,
+    sqft: 4000,
+    type: "For Sale" as const,
+  },
+  {
+    image: "https://images.unsplash.com/photo-1524813686514-a57563d77965",
+    title: "Agricultural Land in Khed",
+    location: "Khed, Pune",
+    price: "45,00,000",
+    bedrooms: 0,
+    bathrooms: 0,
+    sqft: 10000,
+    type: "For Sale" as const,
+  },
+  {
+    image: "https://images.unsplash.com/photo-1500076656116-558758c991c1",
+    title: "NA Plot in Chakan",
+    location: "Chakan, Pune",
     price: "85,00,000",
     bedrooms: 0,
     bathrooms: 0,
-    sqft: 5000,
+    sqft: 3000,
     type: "For Sale" as const,
-  },
-  // Add more land/plot properties
+  }
 ];
 
 const LandPlots = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-white to-accent/20">
       <Navbar />
       <section className="pt-24 pb-12 px-4">
         <div className="container mx-auto">

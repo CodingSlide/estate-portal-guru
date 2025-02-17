@@ -5,60 +5,60 @@ import { PropertyCard } from "@/components/PropertyCard";
 
 const residentialProperties = [
   {
-    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070",
-    title: "Luxury Villa in Koregaon Park",
-    location: "Koregaon Park, Pune",
-    price: "4,50,00,000",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075",
+    title: "Luxury Villa in Magarpatta",
+    location: "Magarpatta, Pune",
+    price: "3,85,00,000",
     bedrooms: 4,
     bathrooms: 4,
-    sqft: 3200,
+    sqft: 3500,
     type: "For Sale" as const,
   },
   {
-    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071",
-    title: "Modern Apartment in Kharadi",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070",
+    title: "Premium Apartment in Kharadi",
     location: "Kharadi, Pune",
-    price: "2,75,00,000",
+    price: "1,95,00,000",
     bedrooms: 3,
-    bathrooms: 2,
+    bathrooms: 3,
     sqft: 1800,
     type: "For Sale" as const,
   },
   {
     image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070",
-    title: "Premium Flat in Magarpatta",
-    location: "Magarpatta, Pune",
-    price: "95,000",
+    title: "Modern Flat in Wakad",
+    location: "Wakad, Pune",
+    price: "85,000",
     bedrooms: 2,
     bathrooms: 2,
     sqft: 1200,
     type: "For Rent" as const,
   },
   {
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075",
-    title: "Elegant Home in Baner",
+    image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=2084",
+    title: "Spacious Villa in Baner",
     location: "Baner, Pune",
-    price: "3,25,00,000",
-    bedrooms: 3,
-    bathrooms: 3,
-    sqft: 2200,
-    type: "For Sale" as const,
-  },
-  {
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070",
-    title: "Modern Villa in Wakad",
-    location: "Wakad, Pune",
-    price: "5,50,00,000",
+    price: "4,25,00,000",
     bedrooms: 4,
     bathrooms: 4,
     sqft: 3800,
     type: "For Sale" as const,
+  },
+  {
+    image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=2070",
+    title: "Luxury Flat in Viman Nagar",
+    location: "Viman Nagar, Pune",
+    price: "1,45,000",
+    bedrooms: 3,
+    bathrooms: 3,
+    sqft: 2200,
+    type: "For Rent" as const,
   }
 ];
 
 const Residential = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-white to-accent/20">
       <Navbar />
       <section className="pt-24 pb-12 px-4">
         <div className="container mx-auto">
