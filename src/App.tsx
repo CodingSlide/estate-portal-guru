@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Residential from "./pages/Residential";
 import Commercial from "./pages/Commercial";
 import LandPlots from "./pages/LandPlots";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/residential" element={<Residential />} />
           <Route path="/commercial" element={<Commercial />} />
           <Route path="/land-plots" element={<LandPlots />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
