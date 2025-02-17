@@ -1,9 +1,11 @@
+
 import { Search, MapPin, Building2, Home, LandPlot } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PropertyCard } from "@/components/PropertyCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Link } from "react-router-dom";
 
 const properties = [
   {
@@ -65,7 +67,7 @@ const Index = () => {
       <section 
         className="pt-24 pb-12 px-4 md:pt-32 md:pb-20 bg-cover bg-center bg-no-repeat relative"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073")',
+          backgroundImage: 'url("https://images.unsplash.com/photo-1582407947304-fd86f028f716?q=80&w=2070&auto=format&fit=crop")',
         }}
       >
         <div className="absolute inset-0 bg-black/50" />
@@ -113,7 +115,12 @@ const Index = () => {
       {/* Featured Properties */}
       <section className="py-12 px-4">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Featured Properties</h2>
+          <div className="flex justify-between items-center mb-12">
+            <h2 className="text-3xl font-bold">Featured Properties</h2>
+            <Link to="/residential">
+              <Button variant="outline">View More</Button>
+            </Link>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {properties.map((property) => (
               <PropertyCard key={property.title} {...property} />
@@ -129,9 +136,11 @@ const Index = () => {
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Connect with our expert real estate agents for personalized assistance in Pune
           </p>
-          <Button size="lg" className="animate-fade-up">
-            Contact Us
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" className="animate-fade-up">
+              Contact Us
+            </Button>
+          </Link>
         </div>
       </section>
 

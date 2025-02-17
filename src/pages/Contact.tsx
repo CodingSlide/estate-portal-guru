@@ -5,8 +5,19 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useToast } from "@/components/ui/use-toast";
 
 const Contact = () => {
+  const { toast } = useToast();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast({
+      title: "Message sent!",
+      description: "We'll get back to you as soon as possible.",
+    });
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
@@ -20,23 +31,23 @@ const Contact = () => {
               {/* Contact Form */}
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <h2 className="text-2xl font-semibold mb-6">Send us a message</h2>
-                <form className="space-y-4">
+                <form className="space-y-4" onSubmit={handleSubmit}>
                   <div>
-                    <Input placeholder="Your Name" />
+                    <Input placeholder="Your Name" required />
                   </div>
                   <div>
-                    <Input type="email" placeholder="Your Email" />
+                    <Input type="email" placeholder="Your Email" required />
                   </div>
                   <div>
-                    <Input type="tel" placeholder="Phone Number" />
+                    <Input type="tel" placeholder="Phone Number" required />
                   </div>
                   <div>
                     <Input placeholder="Property Interest" />
                   </div>
                   <div>
-                    <Textarea placeholder="Your Message" className="h-32" />
+                    <Textarea placeholder="Your Message" className="h-32" required />
                   </div>
-                  <Button className="w-full">Submit</Button>
+                  <Button type="submit" className="w-full">Submit</Button>
                 </form>
               </div>
 

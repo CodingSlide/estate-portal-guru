@@ -2,6 +2,8 @@
 import { Heart, MapPin, Maximize2, BedDouble, Bath } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 interface PropertyCardProps {
   image: string;
@@ -24,6 +26,14 @@ export const PropertyCard = ({
   sqft,
   type,
 }: PropertyCardProps) => {
+  const [isLiked, setIsLiked] = useState(false);
+  const [likeCount, setLikeCount] = useState(0);
+
+  const handleLikeClick = () => {
+    setIsLiked(!isLiked);
+    setLikeCount(prev => isLiked ? prev - 1 : prev + 1);
+  };
+
   return (
     <Card className="group overflow-hidden rounded-lg transition-transform hover:shadow-lg hover:-translate-y-1">
       <div className="relative">
@@ -35,8 +45,14 @@ export const PropertyCard = ({
         <Badge className="absolute top-4 left-4 bg-primary text-white">
           {type}
         </Badge>
-        <button className="absolute top-4 right-4 rounded-full bg-white/80 p-2 transition-colors hover:bg-primary hover:text-white">
-          <Heart className="h-4 w-4" />
+        <button 
+          onClick={handleLikeClick}
+          className={cn(
+            "absolute top-4 right-4 rounded-full bg-white/80 p-2 transition-colors hover:bg-primary hover:text-white",
+            isLiked && "bg-[#ea384c] text-white hover:bg-[#ea384c]/90"
+          )}
+        >
+          <Heart className="h-4 w-4" fill={isLiked ? "currentColor" : "none"} />
         </button>
       </div>
       
@@ -64,8 +80,11 @@ export const PropertyCard = ({
           </div>
         </div>
 
-        <div className="border-t pt-4">
+        <div className="border-t pt-4 flex items-center justify-between">
           <span className="text-xl font-semibold text-primary">₹{price}</span>
+          {likeCount > 0 && (
+            <span className="text-sm text-[#ea384c]">{likeCount} likes</span>
+          )}
         </div>
       </div>
     </Card>
